@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and In-Line Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+
+        }
+        @media screen and  (min-width:769px) and (max-width:1024px)  {
+            .grid-container{
+                justify-content: center;
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        
+        .grid-item{
+            text-align: center;
+            background-color: aqua;
+            justify-content: center;
+            align-items: center;
+            border-radius:1rem ;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item3</div>
+        <div class="grid-item">Item2</div>
+        <div class="grid-item">Item1</div>
+        <div class="grid-item">Item3</div>
+        <div class="grid-item">Item2</div>
+        <div class="grid-item">Item1</div>
+    </div>
+</body>
+</html>
